@@ -1,0 +1,23 @@
+{
+    "extends": "recommended",
+    "rules": {
+        "CompileStatic": {
+            "enabled": false
+        },
+        "DuplicateNumberLiteral": {
+            "enabled": false
+        },
+        "DuplicateStringLiteral": {
+            "enabled": false
+        },
+        "JavaIoPackageAccess": {
+            "enabled": false
+        },
+        "NestedForLoop": {
+            "enabled": false
+        },
+        "SystemExit": {
+            "enabled": false
+        }
+    }
+}

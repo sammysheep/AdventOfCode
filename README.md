@@ -12,6 +12,8 @@
 | 08   | Julia*   | Endearing at first but got awkward under the mistltoe         |
 | 09   | Ruby*    | Not the shiniest gem, yet treastures may lay within           |
 | 10   | Go**     | A fruit cake: filling, predictable, but somehow lacking heart |
+| 11   | Groovy*  | A glitter bomb, sparkly and bright, but gets everywhere       |
+| 12   |          |                                                               |
 
 
 \* *First time caller, long time listener*
