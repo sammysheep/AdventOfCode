@@ -57,9 +57,9 @@ debug = true
 rounds = args.size() < 2 ? 10000 : args[1] as int
 
 // Groovy `long` is too small, `BigInteger` is too slow calculating a common multiple seems
-// To keep the system in check The `long` does help here because at most cm^2 can
+// To keep the system in check the `long` does help here because at most cm^2 can
 // be calculated, which in this case will remain in the quadrillions, not
-// quintillions. LCM is probably better to try for larger sizes.
+// quintillions. Maybe LCM might work for larger sizes, haven't confirmed.
 cm = 1
 
 for (d in data) {
