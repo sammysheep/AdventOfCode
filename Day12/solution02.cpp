@@ -153,7 +153,8 @@ int main(int argc, char *argv[])
     }
 
     std::vector<std::vector<uint8_t>> grid;
-    Point start, end;
+    Point end;
+    std::vector<Point> starting_points;
     size_t nrow = 0;
     size_t ncol = 0;
 
@@ -166,17 +167,19 @@ int main(int argc, char *argv[])
             std::vector<uint8_t> vbuff(line.begin(), line.end());
             grid.push_back(vbuff);
 
-            std::size_t col_start = line.find_first_of("S");
-            if (col_start != std::string::npos)
+            for (size_t col_start = 0; col_start < line.length(); col_start++)
             {
-                start = Point(nrow, col_start);
-                grid[nrow][col_start] = 'a';
-                ncol = line.size();
+                if (line[col_start] == 'a' || line[col_start] == 'S')
+                {
+                    starting_points.push_back(Point(nrow, col_start));
+                    grid[nrow][col_start] = 'a';
+                }
             }
 
             std::size_t col_end = line.find_first_of("E");
             if (col_end != std::string::npos)
             {
+                ncol = line.size();
                 end = Point(nrow, col_end);
                 grid[nrow][col_end] = 'z';
             }
@@ -192,26 +195,28 @@ int main(int argc, char *argv[])
     file.close();
 
     std::cout << "Grid of " << nrow << " rows by " << ncol << " cols\n";
-    std::cout << "Start (row, col) at (" << start.row << ", " << start.col << ")\n";
-    std::cout << "End   (row, col) at (" << end.row << ", " << end.col << ")\n";
+    std::cout << "End   (row, col) at (" << end.row << ", " << end.col << ")\n\n";
 
-    Grid g = Grid(nrow, ncol, grid);
-    g.add_point(start);
-
-    Point p;
-    size_t step = 0;
-    int iter = 0;
-    do
+    int min = INT_MAX;
+    for (Point start : starting_points)
     {
-        iter++;
-        p = g.search_and_add();
-        if (p.steps > step)
-        {
-            step = p.steps;
-            std::cout << "Step " << p.steps << ", i=" << iter << ", heap=" << g.active.size() << "\n";
-        }
-    } while (p != end);
+        std::cout << "Starting at: " << start << "\n";
+        Grid g = Grid(nrow, ncol, grid);
+        g.add_point(start);
 
-    std::cout << "\n"
-              << p << "\n";
+        Point p;
+        do
+        {
+            p = g.search_and_add();
+        } while (p != end && g.active.size() > 0);
+
+        std::cout << "Ending at:   " << p << "\n\n";
+        if (p.steps < min && p == end)
+        {
+            min = p.steps;
+        }
+    }
+
+    std::cout << "Shortest path is: " << min << " (out of " << starting_points.size() << " starting points)"
+              << "\n";
 }
