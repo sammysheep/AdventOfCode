@@ -2,7 +2,6 @@
 // To compile: g++ -o solution01 solution01.cpp -std=c++20
 //
 // Based on Dijkstra's algorithm in C++ using a min priority queue and grid.
-// Too slow and memory inefficient. :/
 
 #include <string>
 #include <fstream>
@@ -81,6 +80,7 @@ public:
 
     void add_point(Point p)
     {
+        unvisited[p.row][p.col] = false;
         active.emplace(p);
     }
 
@@ -200,13 +200,15 @@ int main(int argc, char *argv[])
 
     Point p;
     size_t step = 0;
+    int iter = 0;
     do
     {
+        iter++;
         p = g.search_and_add();
         if (p.steps > step)
         {
             step = p.steps;
-            std::cout << "Step " << p.steps << "\n";
+            std::cout << "Step " << p.steps << ", i=" << iter << ", heap=" << g.active.size() << "\n";
         }
     } while (p != end);
 
