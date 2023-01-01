@@ -15,6 +15,7 @@
 | 11   | Groovy*      | A glitter bomb: sparkly and bright, but gets everywhere                |
 | 12   | C++          | Like lighting the Christmas tree with real candles and heading to bed. |
 | 13   | Javascript** | Hakuna matata! Slimy, yet satisfying!                                  |
+| 14   | Nim*         | A star! But still yonder afar! (maturing)                              |
 |      |              |                                                                        |
 
 
