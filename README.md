@@ -16,8 +16,9 @@
 | 12   | C++          | Like lighting the Christmas tree with real candles and heading to bed. |
 | 13   | Javascript** | Hakuna matata! Slimy, yet satisfying!                                  |
 | 14   | Nim*         | A star! But still yonder afar! (maturing)                              |
-|      |              |                                                                        |
+| 15   | Elixir*      | Beautiful and glistening yet rigid and unyielding as ice.              |
+| 16   |              |                                                                        |
 
 
 \* *First time caller, long time listener*
-\*\* Everyone deserves a second chance.
+\*\* *Everyone deserves a second chance.*
