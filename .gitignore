@@ -1,3 +1,8 @@
 Day??/input.*
 Day??/test*
 Day??/log.txt
+Day??/*/bin
+Day??/*/obj
+Day??/*/input.txt
+Day??/*/test*
+Day16/Solution01/Solution01.csproj
