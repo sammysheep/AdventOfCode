@@ -101,7 +101,8 @@ Cost[,] partials = new Cost[1 << n, n];
 // Costs to the first node.
 for (int k = 1; k < n; k++)
 {
-    partials[(1 << k), k] = AccumulateCost(new Cost(0, 30), distances[0, k]);
+    // Change starting time
+    partials[(1 << k), k] = AccumulateCost(new Cost(0, 26), distances[0, k]);
 }
 
 // Costs for all other subsets.
@@ -124,7 +125,44 @@ for (int subset_size = 2; subset_size < n; subset_size++)
 
 int last_subset = ((1 << n) - 1) - 1;
 int total_pressure = -Enumerable.Range(1, n - 1).Select(k => partials[last_subset, k].pressure).Min();
-Console.WriteLine($"Released {total_pressure} pressure overall for {n - 1} valves opened.");
+
+// Turn our pressures into a 1D array
+int[] pressures = new int[last_subset + 1];
+for (int subset = 2; subset <= last_subset; subset++)
+{
+
+    int min = Int32.MaxValue;
+    for (int k = 1; k < n; k++)
+    {
+        if (partials[subset, k].pressure < min)
+        {
+            min = partials[subset, k].pressure;
+        }
+    }
+    pressures[subset] = min;
+}
+
+// 💪 Brute force the solution over the lower triangle
+// Hey, I'm tired of this puzzle here!
+int combined_min_pressure = Int32.MaxValue;
+for (int s1 = 2; s1 <= last_subset - 1; s1++)
+{
+    for (int s2 = s1 + 1; s2 <= last_subset; s2++)
+    {
+        // bit masks must be complementary
+        if ((s2 ^ s1) == last_subset)
+        {
+            int sum = pressures[s1] + pressures[s2];
+            if (sum < combined_min_pressure)
+            {
+                combined_min_pressure = sum;
+            }
+        }
+    }
+
+}
+
+Console.WriteLine($"Released {-combined_min_pressure} combined pressure with help from the elephant.");
 
 
 List<int> MaskToList(int mask, int n = 32)
