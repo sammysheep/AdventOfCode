@@ -19,7 +19,7 @@
 | 15   | Elixir*      | Beautiful and glistening yet as rigid and unyielding as ice.            |
 | 16   | C# **        | Many fine presents to unwrap under the MS Tree™.                        |
 | 17   | Dart*        | Nifty! Every kind of ornament is being added, but where's my deep copy! |
-| 18   | F# **        | Flexible & expressive but a little slow on the draw.                    |
+| 18   | F# *         | Flexible & expressive but a little slow on the draw.                    |
 | 19   |              |                                                                         |
 
 
