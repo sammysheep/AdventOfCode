@@ -22,7 +22,7 @@
 | 18   | F# *         | Flexible & expressive but a little slow on the draw.                    | Functional, grid search             |
 | 19   | Lua*         | A primitive weapon from a more civilized age.                           | Branch and bound + DFS              |
 | 20   | Typescript*  | Beautiful wrapping paper, but I'm afraid to see what's inside.          | Circular doubly linked list, Modulo |
-| 21   |              |                                                                         |                                     |
+| 21   | Scala        | A supple staff for every kind of ninjitsu (excepting breaking loops)    | Lazy Eval, Secant Root Finding      |
 | 22   |              |                                                                         |                                     |
 | 23   |              |                                                                         |                                     |
 | 24   |              |                                                                         |                                     |
