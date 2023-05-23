@@ -23,7 +23,7 @@
 | 19   | Lua*         | A primitive weapon from a more civilized age.                           | Branch and bound + DFS              |
 | 20   | Typescript*  | Beautiful wrapping paper, but I'm afraid to see what's inside.          | Circular doubly linked list, Modulo |
 | 21   | Scala        | A supple staff for every kind of ninjitsu (except breaking loops)       | Lazy Eval, Secant Root Finding      |
-| 22   | Swift**      | Well-designed and expressive but bordering on complex.                  | Grid search, 3D rotations           |
+| 22   | Swift**      | Well-designed and expressive but bordering on complex.                  | Maze walk, 3D rotations             |
 | 23   |              |                                                                         |                                     |
 | 24   |              |                                                                         |                                     |
 | 25   |              |                                                                         |                                     |
