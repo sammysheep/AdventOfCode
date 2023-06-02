@@ -25,8 +25,8 @@
 | 21   | Scala        | A supple staff for every kind of ninjitsu (except breaking loops)       | Lazy Eval, Secant Root Finding      |
 | 22   | Swift**      | Well-designed and expressive but bordering on complex.                  | Maze walk, 3D rotations             |
 | 23   | Python       | I don't normally Python, but when I do, I go 3.10+                      | Simulation, Generators              |
-| 24   | Java         |                                                                         |                                     |
-| 25   |              |                                                                         |                                     |
+| 24   | Java         | Reasonable, understandable, but lacking bells and whistles.             | DFS, branch and bound               |
+| 25   | Rust         |                                                                         |                                     |
 
 
 
