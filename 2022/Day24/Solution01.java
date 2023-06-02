@@ -1,3 +1,5 @@
+// Sam Shepard - 2023
+
 import java.nio.file.*;
 import java.io.IOException;
 import java.util.ArrayList;
