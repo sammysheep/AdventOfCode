@@ -62,15 +62,18 @@ public class Solution02 {
 
     };
     static int fastest = Integer.MAX_VALUE;
+    static int round_offset = 0;
+
     static HashSet<TimePlace> visited = new HashSet<TimePlace>();
 
-    static void swap_and_reset() {
+    static void swap_and_reset(int offset) {
         var tmp = start;
         start = end;
         end = tmp;
 
         visited.clear();
         fastest = Integer.MAX_VALUE;
+        round_offset = offset;
     }
 
     public static void main(String args[]) {
@@ -146,11 +149,11 @@ public class Solution02 {
         var t1 = search(0, start);
         System.out.println("T1: " + t1);
 
-        swap_and_reset();
+        swap_and_reset(t1);
         var t2 = search(t1, start);
         System.out.println("T2: " + (t2 - t1));
 
-        swap_and_reset();
+        swap_and_reset(t2);
         var t3 = search(t2, start);
         System.out.println("T3: " + (t3 - t2));
 
@@ -172,10 +175,10 @@ public class Solution02 {
             visited.add(key);
         }
 
-        // NB: round > 2500, avoids a stack overflow caused by getting stuck in a cycle
-        // without implementing cycle detection or some such thing.
+        // NB: round - offset > 1000, avoids a stack overflow caused by getting stuck in
+        // a cycle without implementing cycle detection or some such thing.
         var shortest_distance = Math.abs(end.col() - current.col()) + Math.abs(end.row() - current.row());
-        if ((shortest_distance + round) > fastest || round > 2500) {
+        if ((shortest_distance + round) > fastest || (round - round_offset) > 1000) {
             return minutes;
         }
 
