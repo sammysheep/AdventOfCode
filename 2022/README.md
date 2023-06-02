@@ -18,7 +18,7 @@
 | 14   | Nim*         | A star! But still yonder afar! (maturing)                               | More grid search                    |
 | 15   | Elixir*      | Beautiful and glistening yet as rigid and unyielding as ice.            | Functional: sets vs. ranges         |
 | 16   | C# **        | Many fine presents to unwrap under the MS Tree™.                        | Held-Karp, Generators               |
-| 17   | Dart*        | Nifty! Every kind of ornament is being added, but where's my deep copy! | Simulation, Cycle Detection, Regex  |
+| 17   | Dart*        | Nifty! Every kind of ornament is being added, but where's my deep copy! | Simulation, cycle detection, Regex  |
 | 18   | F# *         | Flexible & expressive but a little slow on the draw.                    | Functional, grid search             |
 | 19   | Lua*         | A primitive weapon from a more civilized age.                           | Branch and bound + DFS              |
 | 20   | Typescript*  | Beautiful wrapping paper, but I'm afraid to see what's inside.          | Circular doubly linked list, Modulo |
@@ -26,7 +26,7 @@
 | 22   | Swift**      | Well-designed and expressive but bordering on complex.                  | Maze walk, 3D rotations             |
 | 23   | Python       | I don't normally Python, but when I do, I go 3.10+                      | Simulation, Generators              |
 | 24   | Java         | Reasonable, understandable, but lacking bells and whistles.             | DFS, branch and bound               |
-| 25   | Rust         |                                                                         |                                     |
+| 25   | Rust         | A true gift to work with: expressive, rigorous, and blazingly fast.     | Number base conversion              |
 
 
 
