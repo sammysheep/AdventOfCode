@@ -1,0 +1,9 @@
+[package]
+edition = "2021"
+name = "solutions2015"
+version = "0.1.0"
+
+[dependencies]
+md5 = "0.7.0"
+paste = "1.0.15"
+regex = {version = "*", default-features = false, features = ["unicode-perl"]}
