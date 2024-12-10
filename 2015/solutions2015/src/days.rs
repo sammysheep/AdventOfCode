@@ -6,6 +6,7 @@ pub mod day_05;
 pub mod day_06;
 pub mod day_07;
 pub mod day_08;
+pub mod day_09;
 
 use std::fmt::Display;
 
@@ -31,6 +32,12 @@ impl From<isize> for Solution {
 
 impl From<u16> for Solution {
     fn from(value: u16) -> Self {
+        Solution::Unsigned(value as usize)
+    }
+}
+
+impl From<u32> for Solution {
+    fn from(value: u32) -> Self {
         Solution::Unsigned(value as usize)
     }
 }

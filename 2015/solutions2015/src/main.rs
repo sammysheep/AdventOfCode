@@ -45,7 +45,8 @@ fn main() {
 
     let (day, part) = (args[1].as_str(), args[2].as_str());
 
-    let result = dispatch_day!(day, part, &data, "01", "02", "03", "04", "05", "06", "07", "08");
+    let result =
+        dispatch_day!(day, part, &data, "01", "02", "03", "04", "05", "06", "07", "08", "09");
 
     println!("Solution for {day}, part {part}: {result}");
 }
